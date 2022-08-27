@@ -20,15 +20,18 @@ const showingNavigationDropdown = ref(false);
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <Link :href="route('dashboard')">
+                                <Link :href="route('inventory.index')">
                                     <BreezeApplicationLogo class="block h-9 w-auto" />
                                 </Link>
                             </div>
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                <!-- <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                    在庫一覧
+                                </BreezeNavLink> -->
+                                <BreezeNavLink :href="route('inventory.index')" :active="route().current('inventory.index')">
+                                    在庫一覧
                                 </BreezeNavLink>
                             </div>
                         </div>
@@ -51,7 +54,7 @@ const showingNavigationDropdown = ref(false);
 
                                     <template #content>
                                         <BreezeDropdownLink :href="route('logout')" method="post" as="button">
-                                            Log Out
+                                            ログアウト
                                         </BreezeDropdownLink>
                                     </template>
                                 </BreezeDropdown>
@@ -73,8 +76,8 @@ const showingNavigationDropdown = ref(false);
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <BreezeResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                        <BreezeResponsiveNavLink :href="route('inventory.index')" :active="route().current('inventory.index')">
+                            在庫一覧
                         </BreezeResponsiveNavLink>
                     </div>
 
@@ -87,7 +90,7 @@ const showingNavigationDropdown = ref(false);
 
                         <div class="mt-3 space-y-1">
                             <BreezeResponsiveNavLink :href="route('logout')" method="post" as="button">
-                                Log Out
+                                ログアウト
                             </BreezeResponsiveNavLink>
                         </div>
                     </div>

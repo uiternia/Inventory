@@ -154,13 +154,9 @@ return [
     */
 
     'attributes' => [
-        'staple_food' => '主食',
-        'main_dish' => '主菜',
-        'side_dish' => '副菜',
-        'soup' => 'スープ',
-        'fruit' => '果物',
-        'day_date' => '日付',
-        'max_people' => '定員上限',
-    ], 
+        'Whoops! Something went wrong.' => 'エラー内容を確認してください',
+        'foodName' => '食品名',
+        'weight' => '在庫量'
+    ],
 
 ];
